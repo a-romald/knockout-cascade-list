@@ -1,0 +1,51 @@
+<?php header('Content-type: text/html ; charset=utf8') ; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- [if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+     <script type="text/javascript" src="selectors.js"></script>
+     <script type="text/javascript" src="model.js"></script>
+     <link rel="stylesheet" href="style.css"/>
+     <title>Page</title>
+</head>
+
+<body>
+
+<div id="block">
+<form id="forma">
+
+<div class="list">
+<label>Department:</label><br />
+<select id="selDepts"></select>
+</div>
+
+<div class="list">
+<label>Company:</label><br />
+<select id="selCompanies">
+</select>
+</div>
+
+<div class="list">
+<label>Product:</label><br />
+<select id="selProducts">
+</select>
+</div>
+
+</form>
+</div>
+
+<br />
+<div id="inform">
+<h3 data-bind="text: $data.goodTitle" style="font-weight: bold;"></h3>
+<p><span data-bind="text:' Price: ' + $data.goodPrice"></span></p>
+<p data-bind="text: $data.goodFeatures"></p>
+</div>
+</body>
+</html>
